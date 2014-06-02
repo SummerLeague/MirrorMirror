@@ -13,7 +13,6 @@
 
 @interface SLRootNavigationContainerViewController ()
 - (IBAction)showCamera:(id)sender;
-- (IBAction)cancelCamera:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UIView *rootContainerView;
 @property (nonatomic, strong) SLCameraViewController *cameraViewController;
@@ -35,12 +34,19 @@
 	return self;
 }
 
-- (void)cancelCamera:(id)sender {
+- (void)hideCamera:(id)sender {
 	[_slideInController pushViewController:_feedViewController];
+	
+	
+	UIBarButtonItem *showCameraButton = [[UIBarButtonItem alloc] initWithTitle:@"camera" style:UIBarButtonItemStylePlain target:self action:@selector(showCamera:)];
+	self.navigationItem.leftBarButtonItem = showCameraButton;
 }
 
 - (IBAction)showCamera:(id)sender {
 	[_slideInController popViewController];
+	
+	UIBarButtonItem *hideCameraButton = [[UIBarButtonItem alloc] initWithTitle:@"X" style:UIBarButtonItemStylePlain target:self action:@selector(hideCamera:)];
+	self.navigationItem.leftBarButtonItem = hideCameraButton;
 }
 
 - (void)setupSlideInController

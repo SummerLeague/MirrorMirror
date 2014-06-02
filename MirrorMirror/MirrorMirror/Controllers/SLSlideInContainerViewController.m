@@ -20,14 +20,14 @@
 
 
 - (void)pushViewController:(UIViewController *)viewController {
-	UIViewController *topVC = [self topMostViewController];
+	//UIViewController *topVC = [self topMostViewController];
 
 	[self pushViewController:viewController withDuration:ANIMATION_DURATION animatioStart:^{
 		viewController.view.frame = self.view.bounds;
 		viewController.view.transform = CGAffineTransformMakeTranslation(0, self.view.bounds.size.height);
 	} animationEnd:^{
-		topVC.view.alpha = 0.5;
-		topVC.view.transform = CGAffineTransformMakeScale(0.7, 0.7);
+		//topVC.view.alpha = 0.5;
+		//topVC.view.transform = CGAffineTransformMakeScale(0.7, 0.7);
 		viewController.view.transform = CGAffineTransformIdentity;
 	} completion:nil];
 }
@@ -40,8 +40,8 @@
 		[self popViewControllerWithDuration:ANIMATION_DURATION animatioStart:^{
 			
 		} animationEnd:^{
-			targetVC.view.alpha = 1.0;
-			targetVC.view.transform = CGAffineTransformIdentity;
+			//targetVC.view.alpha = 1.0;
+			//targetVC.view.transform = CGAffineTransformIdentity;
 			topVC.view.transform = CGAffineTransformMakeTranslation(0, self.view.bounds.size.height);
 		} completion:nil];
 	}

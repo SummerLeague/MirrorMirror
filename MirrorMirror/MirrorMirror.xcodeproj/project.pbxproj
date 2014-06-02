@@ -131,7 +131,6 @@
 				AD1BE6DC193BC02A0032F2C0 /* Views */,
 				AD1BE6A6193AA2A90032F2C0 /* SLAppDelegate.h */,
 				AD1BE6A7193AA2A90032F2C0 /* SLAppDelegate.m */,
-				AD1BE6A9193AA2A90032F2C0 /* Main.storyboard */,
 				AD1BE6CC193ADADB0032F2C0 /* Controllers */,
 				AD1BE6AF193AA2A90032F2C0 /* Images.xcassets */,
 				AD1BE69E193AA2A90032F2C0 /* Supporting Files */,
@@ -188,6 +187,7 @@
 		AD1BE6DC193BC02A0032F2C0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AD1BE6A9193AA2A90032F2C0 /* Main.storyboard */,
 				AD1BE6DD193BC05F0032F2C0 /* SLCameraView.xib */,
 				AD1BE6DF193BC6C70032F2C0 /* SLFeedView.xib */,
 			);
@@ -337,6 +337,7 @@
 				AD1BE6AA193AA2A90032F2C0 /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		AD1BE6BF193AA2A90032F2C0 /* InfoPlist.strings */ = {
