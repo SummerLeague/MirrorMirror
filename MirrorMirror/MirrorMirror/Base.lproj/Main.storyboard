@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="p5j-eA-xSb">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--Root Navigation Container View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="SLRootNavigationContainerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1TX-fx-vOR"/>
+                        <viewControllerLayoutGuide type="bottom" id="Jgl-pm-1Rh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DVU-25-xdA">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.4893701941569103" blue="0.42568671111010392" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="DVU-25-xdA" secondAttribute="trailing" id="0g2-ZI-OM3"/>
+                            <constraint firstItem="DVU-25-xdA" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="Yb5-MM-2Ef"/>
+                            <constraint firstItem="DVU-25-xdA" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="aHu-4W-S57"/>
+                            <constraint firstAttribute="bottom" secondItem="DVU-25-xdA" secondAttribute="bottom" id="c0t-V9-tgI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="6sz-Zy-MHG">
+                        <barButtonItem key="leftBarButtonItem" title="dismiss camera" id="pAq-3M-cMZ">
+                            <connections>
+                                <action selector="cancelCamera:" destination="vXZ-lx-hvc" id="elK-Qa-NiM"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="camera" id="QiS-Up-ciG">
+                            <connections>
+                                <action selector="showCamera:" destination="vXZ-lx-hvc" id="gBj-B9-gei"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="rootContainerView" destination="DVU-25-xdA" id="2ms-lA-N6s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="90" y="19"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="srg-EX-7Rj">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="p5j-eA-xSb" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="L5o-8V-aV5">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="zx6-jY-pr2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r6d-yi-dsj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-355" y="-163"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
