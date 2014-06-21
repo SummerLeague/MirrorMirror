@@ -9,7 +9,12 @@
 import UIKit
 
 class SLAnimatedViewControllerContainer: UIViewController {
+	
 	var rootViewController: UIViewController!
+	
+	
+	/* Lifecycle
+	------------------------------------------*/
 	
 	init(rootViewController: UIViewController) {
 		
@@ -17,10 +22,28 @@ class SLAnimatedViewControllerContainer: UIViewController {
 		super.init(coder: nil)
 	}
 	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		
+		self.view.autoresizesSubviews = true
+		
+		if self.childViewControllers.count == 0 {
+			self.addViewController(self.rootViewController)
+			var rootView: UIView = self.rootViewController.view
+			rootView.frame = self.view.bounds
+			self.view.addSubview(rootView)
+			self.rootViewController.didMoveToParentViewController(self)
+		}
+	}
+	
+	
+	/* Instance Methods
+	------------------------------------------*/
+	
 	func addViewController(viewController: UIViewController) {
 		viewController.willMoveToParentViewController(self)
 		self.addChildViewController(viewController)
-		self.childViewControllers
+		//self.childViewControllers
 	}
 	
 	func topMostViewController() -> UIViewController {
@@ -84,17 +107,4 @@ class SLAnimatedViewControllerContainer: UIViewController {
 			})
 	}
 	
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		
-		self.view.autoresizesSubviews = true
-		
-		if self.childViewControllers.count == 0 {
-			self.addViewController(self.rootViewController)
-			var rootView: UIView = self.rootViewController.view
-			rootView.frame = self.view.bounds
-			self.view.addSubview(rootView)
-			self.rootViewController.didMoveToParentViewController(self)
-		}
-	}
 }

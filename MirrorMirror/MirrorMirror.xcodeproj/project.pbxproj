@@ -20,6 +20,11 @@
 		AD1BE6C3193AA2A90032F2C0 /* MirrorMirrorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1BE6C2193AA2A90032F2C0 /* MirrorMirrorTests.m */; };
 		AD1BE6DE193BC05F0032F2C0 /* SLCameraView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD1BE6DD193BC05F0032F2C0 /* SLCameraView.xib */; };
 		AD1BE6E0193BC6C70032F2C0 /* SLFeedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD1BE6DF193BC6C70032F2C0 /* SLFeedView.xib */; };
+		AD249B12195270A300FAF08C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD249B11195270A300FAF08C /* AVFoundation.framework */; };
+		AD43874A195363BB009D00B8 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD438749195363BB009D00B8 /* CoreMedia.framework */; };
+		AD43874C1953C539009D00B8 /* SLCameraOutputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD43874B1953C539009D00B8 /* SLCameraOutputController.swift */; };
+		AD43874E1953C54D009D00B8 /* SLCameraSessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD43874D1953C54D009D00B8 /* SLCameraSessionController.swift */; };
+		AD4387501953D44A009D00B8 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD43874F1953D44A009D00B8 /* CoreImage.framework */; };
 		AD56CB811940191600BB46B9 /* SLAnimatedViewControllerContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD56CB801940191600BB46B9 /* SLAnimatedViewControllerContainer.swift */; };
 		AD64225B193F8EDB008A61E8 /* SLSlideInContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD64225A193F8EDB008A61E8 /* SLSlideInContainerViewController.swift */; };
 		AD6C8619193D6F5B005B07F7 /* SLFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6C8618193D6F5B005B07F7 /* SLFeedViewController.swift */; };
@@ -55,6 +60,11 @@
 		AD1BE6C2193AA2A90032F2C0 /* MirrorMirrorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MirrorMirrorTests.m; sourceTree = "<group>"; };
 		AD1BE6DD193BC05F0032F2C0 /* SLCameraView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLCameraView.xib; sourceTree = "<group>"; };
 		AD1BE6DF193BC6C70032F2C0 /* SLFeedView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLFeedView.xib; sourceTree = "<group>"; };
+		AD249B11195270A300FAF08C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		AD438749195363BB009D00B8 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		AD43874B1953C539009D00B8 /* SLCameraOutputController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLCameraOutputController.swift; sourceTree = "<group>"; };
+		AD43874D1953C54D009D00B8 /* SLCameraSessionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLCameraSessionController.swift; sourceTree = "<group>"; };
+		AD43874F1953D44A009D00B8 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		AD56CB801940191600BB46B9 /* SLAnimatedViewControllerContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLAnimatedViewControllerContainer.swift; sourceTree = "<group>"; };
 		AD64225A193F8EDB008A61E8 /* SLSlideInContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLSlideInContainerViewController.swift; sourceTree = "<group>"; };
 		AD6C8618193D6F5B005B07F7 /* SLFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLFeedViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +78,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD4387501953D44A009D00B8 /* CoreImage.framework in Frameworks */,
+				AD43874A195363BB009D00B8 /* CoreMedia.framework in Frameworks */,
+				AD249B12195270A300FAF08C /* AVFoundation.framework in Frameworks */,
 				AD1BE69A193AA2A90032F2C0 /* CoreGraphics.framework in Frameworks */,
 				AD1BE69C193AA2A90032F2C0 /* UIKit.framework in Frameworks */,
 				AD1BE698193AA2A90032F2C0 /* Foundation.framework in Frameworks */,
@@ -109,6 +122,9 @@
 		AD1BE696193AA2A90032F2C0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AD43874F1953D44A009D00B8 /* CoreImage.framework */,
+				AD438749195363BB009D00B8 /* CoreMedia.framework */,
+				AD249B11195270A300FAF08C /* AVFoundation.framework */,
 				AD1BE697193AA2A90032F2C0 /* Foundation.framework */,
 				AD1BE699193AA2A90032F2C0 /* CoreGraphics.framework */,
 				AD1BE69B193AA2A90032F2C0 /* UIKit.framework */,
@@ -120,8 +136,9 @@
 		AD1BE69D193AA2A90032F2C0 /* MirrorMirror */ = {
 			isa = PBXGroup;
 			children = (
-				AD1BE6DC193BC02A0032F2C0 /* Views */,
 				ADF4BA72193D7C5000006ABB /* SLAppDelegate.swift */,
+				AD249B0C19526DFC00FAF08C /* Lib */,
+				AD1BE6DC193BC02A0032F2C0 /* Views */,
 				AD1BE6CC193ADADB0032F2C0 /* Controllers */,
 				AD1BE6AF193AA2A90032F2C0 /* Images.xcassets */,
 				AD1BE69E193AA2A90032F2C0 /* Supporting Files */,
@@ -179,6 +196,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		AD249B0C19526DFC00FAF08C /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				AD43874B1953C539009D00B8 /* SLCameraOutputController.swift */,
+				AD43874D1953C54D009D00B8 /* SLCameraSessionController.swift */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -227,6 +253,9 @@
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "Summer League";
 				TargetAttributes = {
+					AD1BE693193AA2A90032F2C0 = {
+						DevelopmentTeam = MDFJAZ3XLM;
+					};
 					AD1BE6B4193AA2A90032F2C0 = {
 						TestTargetID = AD1BE693193AA2A90032F2C0;
 					};
@@ -279,12 +308,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD43874E1953C54D009D00B8 /* SLCameraSessionController.swift in Sources */,
 				ADD891A9193E4ADA00675249 /* SLRootNavigationContainerViewController.swift in Sources */,
 				ADF4BA73193D7C5000006ABB /* SLAppDelegate.swift in Sources */,
 				ADF4BA71193D7B1400006ABB /* SLCameraViewController.swift in Sources */,
 				AD56CB811940191600BB46B9 /* SLAnimatedViewControllerContainer.swift in Sources */,
 				AD64225B193F8EDB008A61E8 /* SLSlideInContainerViewController.swift in Sources */,
 				AD6C8619193D6F5B005B07F7 /* SLFeedViewController.swift in Sources */,
+				AD43874C1953C539009D00B8 /* SLCameraOutputController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,13 +444,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MirrorMirror/MirrorMirror-Prefix.pch";
 				INFOPLIST_FILE = "MirrorMirror/MirrorMirror-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = app;
@@ -432,13 +465,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MirrorMirror/MirrorMirror-Prefix.pch";
 				INFOPLIST_FILE = "MirrorMirror/MirrorMirror-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				WRAPPER_EXTENSION = app;
 			};
